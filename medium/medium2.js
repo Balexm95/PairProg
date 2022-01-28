@@ -1,58 +1,37 @@
-// JavaScript program to check whether two strings are anagrams of each other
+// //MEDIUM 2
+// // Create a function that accepts two strings, then determines 
+//whether or not the first string is an anagram of the second string 
+//by returning a boolean.
 
-function isAnagram(string1,string2)
-{
+// //this code removes all the punctuation marks from a string
+const takeAway = (string) => {
+ //Creating array of punctuation marks
+  const punc = [".", "'", "!", ":", ";", " ", ",", "@"];
+// value of x is   
+//  Loop length times of punctuation array we created
+  for(i = 0; i< punc.length; i++){
+   string =  string.replaceAll(punc[i], "")//Replace al punctuation with nothing inside string
 
-// lengths of both strings
- let length1 = string1.length;
- let length2 = string2.length;
 
- if (length1 === length2) {
-    return true;
-    
-   
- 
- }}
-
- // Sort both strings
- string1.toLowerCase.split.sort();
- string2.toLowerCase.split.sort()
-
-  // Compare sorted strings
-  for (let i = 0; i < length1; i++){
-    if (string1[i] === string2[i])
-    return true;
+      }
+      //Finaly return the string
+      return string;
   }
-  
+ 
+const anagramChecker = (a,b) => {
+  //setting a to lowercase the splitting it then sorting and joining again
+  firstParam = a.toLowerCase().split("").sort().join(""); // im a dot in place
+  secondParam = b.toLowerCase().split("").sort().join(""); // a decimal point  
+  // Removing punctuation from a and b using above function i just explained
+  puncRmv1 = takeAway(firstParam);               
+  puncRmv2 = takeAway(secondParam);
+  //Checking whether both are same
+  let result = puncRmv1 === puncRmv2
 
-let string1=["Avenger's"];
-let string2=["Spiderman"];
-
- if (isAnagram(string1, string2))
- console.log("The two strings are"
-                    + " anagrams of each other");
-else
- console.log("The two strings are not"
-                    + " anagrams of each other");
+  //Returning the result
+  return result;
+}
+console.log(anagramChecker("a decimal point", "I'm a dot in place."));
 
                     
-                    
-                   /* 
-                    
-                    function anagrams (x,y){
-                        var stringX = x.toLowerCase().replace(/[^a-z\d]/g, '').split('').sort().join('');
-                        var stringY = y.toLowerCase().replace(/[^a-z\d]/g, '').split('').sort().join('');
-                    
-                    
-                    if( stringX === stringY){
-                        console.log(true)
-                    }
-                    else{
-                        console.log(false)
-                    }
-                    }
-
-                    let text = "So dark the con of man";
-                    let text2 = "Madonna of the Rocks";
-                    
-                    console.log(anagrams(text,text2));  */            
+         

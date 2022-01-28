@@ -1,3 +1,12 @@
+// // Write a JavaScript function that takes in a random array and
+// //   odd arrays and
+// //   even arrays.
+// //  outputs two new arrays of
+// // Example:
+// // Input: [2, 4, 7, 11, 15, 16]
+// // Output: Even arrays: [2, 4, 16]
+// //     Odd arrays: [7, 11, 15]
+// //Easy 1
 let array = Array(10) // generates a random array of up to 10 index
                 .fill() // fills each index of said array
                 .map(() =>  Math.floor(Math.random() * 50)+ 1); // arrays from 0-50 (exclusive)
